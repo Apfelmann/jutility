@@ -1,0 +1,29 @@
+{
+  "name": "jutility",
+  "version": "1.0.0",
+  "description": "Wrapper around some utility libraries and exposing them to the cmd",
+  "main": "bin/cmd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apfelmann/jutility.git"
+  },
+  "keywords": [
+    "crypto",
+    "utility",
+    "command",
+    "line"
+  ],
+  "author": "Jakob Abfalter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Apfelmann/jutility/issues"
+  },
+  "homepage": "https://github.com/Apfelmann/jutility#readme",
+  "dependencies": {
+    "generate-password": "^1.4.0",
+    "mocha": "^5.2.0"
+  }
+}

@@ -1,6 +1,6 @@
 const CommandFactory = require('../lib/CommandFactory');
 
-const main = async () => {
+module.exports = main = async () => {
     if( process.argv.length < 3 ) { throw  new Error("At least one argument is expected") }
     else {
         const cmdtype = process.argv[2];

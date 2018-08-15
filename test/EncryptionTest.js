@@ -177,6 +177,25 @@ describe('Tests for the Encryption Command', () => {
         assert.notStrictEqual(text, plain);
     });
 
+    it('Should successfully encrypt a sample file even it the filename ends with /', async () => {
+        const plain = "This is a teststring";
+        toBeRemoved.push("enc_test.txt");
+        fs.writeFileSync("test.txt", plain);
+        process.argv = [
+            "node.exe",
+            "cmd.js",
+            "encrypt",
+            "test.txt/",
+            samplekey,
+            sampleiv
+        ];
+        await main();
+        assert(fs.existsSync("enc_test.txt"));
+        assert(!fs.existsSync("test.txt"));
+        const text = fs.readFileSync("enc_test.txt", "UTF-8");
+        assert.notStrictEqual(text, plain);
+    });
+
     it('Should successfully encrypt a sample file and decrypt it again', async () => {
         const plain = "This is a teststring";
         const filename = "test.txt";

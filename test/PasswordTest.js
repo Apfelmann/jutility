@@ -1,4 +1,3 @@
-const mocha = require('mocha');
 const assert = require('assert');
 const main = require('../bin/cmd');
 const CommandFactory = require('../lib/CommandFactory');

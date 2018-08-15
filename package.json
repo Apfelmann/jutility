@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/Apfelmann/jutility#readme",
   "dependencies": {
-    "random-number-csprng": "^1.0.2"
+    "random-number-csprng": "^1.0.2",
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {
     "mocha": "^5.2.0",

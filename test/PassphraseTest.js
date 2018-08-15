@@ -1,4 +1,5 @@
 const assert = require('assert');
+const main = require('../bin/cmd');
 
 describe('Tests for the Passphrase Command', () => {
 

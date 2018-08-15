@@ -1,6 +1,6 @@
 ## Jutility
 
-> A simple command line utility tool I have written for myself which can generate random secure passwords and passphrase, as well as AES ecrypt files or directories. The name comes from my first name Jakob.
+> A simple command line utility tool I have written for myself which can generate random secure passwords and passphrases, as well as AES encrypt files or directories. The name comes from my first name Jakob.
 
 For random number generations it uses the [random-number-csprng](https://github.com/joepie91/node-random-number-csprng#readme) library to generate cryptographically secure pseudo-random numbers. 
 
@@ -10,7 +10,7 @@ For random number generations it uses the [random-number-csprng](https://github.
 npm install -g jutility
 ```
 
-### Usgae
+### Usage
 
 #### Password Generation
 

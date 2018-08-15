@@ -1,10 +1,10 @@
 {
   "name": "jutility",
   "version": "1.0.0",
-  "description": "Wrapper around some utility libraries and exposing them to the cmd",
+  "description": "Command line tool to generate secure passwords, passphrases and AES encrypt data",
   "main": "bin/cmd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,10 @@
     "crypto",
     "utility",
     "command",
-    "line"
+    "line",
+    "encryption",
+    "password",
+    "passphrase"
   ],
   "author": "Jakob Abfalter",
   "license": "MIT",
@@ -23,7 +26,11 @@
   },
   "homepage": "https://github.com/Apfelmann/jutility#readme",
   "dependencies": {
-    "generate-password": "^1.4.0"
+    "random-number-csprng": "^1.0.2",
+    "rimraf": "^2.6.2"
+  },
+  "bin": {
+    "jutility": "./bin/cmd.js"
   },
   "devDependencies": {
     "mocha": "^5.2.0",

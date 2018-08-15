@@ -136,6 +136,28 @@ describe('Tests for the Encryption Command', () => {
         assert(errored);
     });
 
+    it('Should throw an error as a path instead of a single file/ directory is supplied as a argument', async () => {
+        const plain = "This is a teststring";
+        fs.writeFileSync("tmp/test.txt", plain);
+        process.argv = [
+            "node.exe",
+            "cmd.js",
+            "encrypt",
+            "tmp/test.txt",
+            samplekey,
+            sampleiv
+        ];
+        let errored = false;
+        try {
+            await main();
+        } catch (e) {
+            assert(e);
+            assert.strictEqual(e.message, "Please navigate to the file or folder you want to encrypt, paths are not allowed");
+            errored = true;
+        }
+        assert(errored);
+    });
+
     it('Should successfully encrypt a sample file', async () => {
         const plain = "This is a teststring";
         toBeRemoved.push("enc_test.txt");
@@ -300,5 +322,9 @@ describe('Tests for the Encryption Command', () => {
         assert(fs.existsSync("enc_tmp/tmp/tmp/test.txt"));
         const enc = fs.readFileSync("enc_tmp/tmp/tmp/test.txt", "utf-8");
         assert.notStrictEqual(enc, plain);
+    });
+
+    it('Should throw and error when a path instead of a single file/directors is supplied', async () => {
+
     })
 });

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const CommandFactory = require('../lib/CommandFactory');
 
 module.exports = main = async () => {

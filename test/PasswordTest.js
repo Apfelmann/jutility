@@ -43,6 +43,18 @@ describe("Tests for the Password Command", () => {
         assert.strictEqual(result.length, 44);
     });
 
+    it('Should execute a PasswordCommand two times and verify that the passwords are not the same', async () => {
+        const mockv = [
+            "node.exe",
+            "cmd.js",
+            "paSsWord",
+            "444"
+        ];
+        process.argv = mockv;
+        const pw1 = await main();
+        const pw2 = await main();
+    });
+
     it('Should execute a PasswordCommand with noSymbols option', async () => {
         const mockv = [
             "node.exe",

@@ -1,6 +1,6 @@
 {
   "name": "jutility",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Command line tool to generate secure passwords, passphrases and AES encrypt data",
   "main": "bin/cmd.js",
   "scripts": {

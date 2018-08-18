@@ -34,6 +34,15 @@ At the moment the Passphrase Generator uses a german dictionary consisting of ab
 You could easily change the used dictionary by changing the file in `res/german.dic` or add your own file.
 The current code requires each word in a file to be seperated by newline.
 
+#### Name Generation
+
+```
+jutility name
+```
+
+Will generate a name consiting of a randomly choosen first and last name. The dictionaries used for this
+can be found in `res` directory
+
 #### AES Encryption
 
 ```

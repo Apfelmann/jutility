@@ -54,6 +54,15 @@ to the file or directory. Paths to a file or directory are not supported.
 * `key` The Key you want to use, has to be a 32 character long string.
 * `iv` Will be used for the initialization vector, has to be 16 character long string.
 
+In version 1.2.0 a second encryption command was added. You will be promted for the IV and Key, and both should provided  hex encoded. Again IV should be 16 bytes long and key 32 bytes. (Note that this would mean a 32 and 64 character hex string)
+
+```
+jutility [encrypt2|decrypt2] [file]
+```
+* `encrypt|decrypt` if you want to encrypt of decrypt files
+* `file` the name of the file or directory you want to encrypt or decrypt. In your cmd you have to navigate directly
+to the file or directory. Paths to a file or directory are not supported.
+
 
 The library is capable of handling recursive directories. But please be to test if everything works correctly for your, before
 you use it on a everyday basis. I have only tested in on one OS.
